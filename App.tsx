@@ -1,9 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react';
-import Home from './views/screens/HomeScreen';
+import { NavigationContainer } from "@react-navigation/native";
+
+import MainNavigation from './navigation/MainNavigation';
 
 const App = () => {
-  return (<Home />)
+  return (
+    <NavigationContainer>
+      <MainNavigation />
+    </NavigationContainer>
+  )
 }
 
 export default App

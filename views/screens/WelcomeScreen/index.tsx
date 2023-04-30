@@ -5,7 +5,7 @@ import { FLAG_CANADA, GOOSE_LOGO, FACEBOOK_LOGO, GOOGLE_LOGO, APPLE_LOGO, EMAIL_
 import SocialMedia from '../../Components/SocialMedia';
 import styles from "./styles";
 
-const Home = () => {
+const WelcomeScreen = () => {
     return (
         <SafeAreaView style={styles.parentContainer}>
 
@@ -50,4 +50,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default WelcomeScreen;
