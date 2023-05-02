@@ -30,5 +30,8 @@ packager that will transform your JS code on-the-fly:
 npm install
 ```
 2. Open the project in Xcode or Android Studio or Code editor of your choice.
-3. run npx react-native start
-4. Start building on iOS or android simulator.
+3. Start the development build
+```
+npx react-native start
+```
+5. Start building on iOS or android simulator.
