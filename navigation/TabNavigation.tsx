@@ -1,7 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../views/screens/HomeScreen';
 import ProfileScreen from '../views/screens/ProfileScreen';
-import { Image } from 'react-native';
+import ContactScreen from '../views/screens/ContactScreen';
+import { Image, SafeAreaView } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -10,9 +11,9 @@ const TabNavigation = () => {
         <Tab.Navigator screenOptions={{
             headerShown: false,
             tabBarStyle: {
-                height: 70,
+                height: 80,
                 paddingTop: 10,
-                paddingBottom: 10,
+                paddingBottom: 20,
                 paddingHorizontal: 60,
                 alignContent: 'center',
                 alignItems: 'center',
@@ -31,6 +32,13 @@ const TabNavigation = () => {
                     }} />
                 }
             }} />
+             <Tab.Screen name="Contact" component={ContactScreen} options={{
+                 tabBarIcon: () => {
+                     return <Image source={require("../assets/icons/ProfileScreen/contact.jpg")} style={{
+                         height: 20, width: 20, resizeMode: "cover"
+                        }} />
+                    }
+                }} />
             <Tab.Screen name="Account" component={ProfileScreen} options={{
                 tabBarIcon: () => {
                     return <Image source={require("../assets/icons/HomeScreen/nav-profile.webp")} style={{

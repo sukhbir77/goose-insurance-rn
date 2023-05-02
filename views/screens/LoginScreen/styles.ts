@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     loginButton: {
+        flex: 1,
         position: "absolute",
         bottom: 0,
         width: "100%",

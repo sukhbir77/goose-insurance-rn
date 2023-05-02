@@ -20,8 +20,13 @@ const styles = StyleSheet.create({
   },
   flagCanadaContainer: {
     alignItems: "flex-end",
-    marginTop: "10%",
-    marginRight: 15
+    marginTop: 50,
+    marginRight: 15,
+    shadowColor: "black",
+    shadowOffset: {width: 2, height: 2},
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 20
   },
   flagCanada: {
     resizeMode: 'contain',
@@ -59,6 +64,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center', 
     alignItems: 'center',
     zIndex: 1,
+    elevation: 20,
+    shadowColor: "#000",
+    shadowOffset: {width: 5, height: 5},
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
   }, 
   loginContainerChild: {
     height: "40%",

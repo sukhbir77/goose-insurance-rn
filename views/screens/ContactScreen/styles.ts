@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
         color: "#14162C",
         fontSize: 28,
         fontWeight: "bold",
-        paddingHorizontal: 20,
         marginTop: 20
     },
     bodyDetailsContainer: {
@@ -20,9 +19,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingHorizontal: 20,
         paddingVertical: 10,
-        columnGap: 10,
+        columnGap: 10
     },
     bodyText: {
+        fontSize: 18,
+        color: "#737387"
+    },
+    bodyTextSmall: {
         fontSize: 14,
         color: "#14162C"
     },
@@ -50,6 +53,14 @@ const styles = StyleSheet.create({
         fontSize: 18, 
         color: "#FFF", 
         fontWeight: "500" 
+    },
+
+    shadow: {
+        shadowColor: "black",
+        shadowOffset: {width: 10, height: 10},
+        shadowOpacity: 0.2,
+        shadowRadius: 15,
+        elevation: 10
     }
 });
 

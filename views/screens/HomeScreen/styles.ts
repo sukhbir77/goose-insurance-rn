@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     bodyUpperContainer: {
         height: 230,
         backgroundColor: "#F9F9F9"
+
     },
     headerContainer: {
         flexDirection: "row",
@@ -98,9 +99,9 @@ const styles = StyleSheet.create({
     },
     elevation: {
         shadowColor: '#000',
-        shadowOffset: { width: 5, height: 5 },
+        shadowOffset: { width: 2, height: 2 },
         shadowOpacity: 0.5,
-        shadowRadius: 2,
+        shadowRadius: 5,
         elevation: 10,
     },
 });

@@ -1,4 +1,4 @@
-import { View, Text, Image, ImageSourcePropType } from 'react-native';
+import { View, Text, Image, ImageSourcePropType, SafeAreaView } from 'react-native';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../../redux/slicers/userSlicer';
@@ -17,7 +17,7 @@ const HomeScreen = () => {
     }
 
     return (
-        <View style={styles.body}>
+        <SafeAreaView style={styles.body}>
             <View style={styles.bodyUpperContainer}>
                 <View style={styles.headerContainer}>
                     <Image source={GOOSE_LOGO_HOMESCREEN} style={styles.gooseLogoImage} />
@@ -45,7 +45,7 @@ const HomeScreen = () => {
                     })}
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 
