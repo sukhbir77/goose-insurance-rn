@@ -63,10 +63,15 @@ const styles = StyleSheet.create({
         flex: 2,
         backgroundColor: "#FFCEE9",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: 'center'
+    },
+    bodyCategoriesContainer: {
+        width: 340,
+        flexDirection: "row",
+        justifyContent: "flex-start",
         flexWrap: "wrap",
-        gap: 20,
-        padding: 20
+        marginTop: 20,
+        rowGap: 20,
     },
     emptyContainer: {
         height: 100,
@@ -90,7 +95,14 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "500",
         textAlign: "center"
-    }
+    },
+    elevation: {
+        shadowColor: '#000',
+        shadowOffset: { width: 5, height: 5 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 10,
+    },
 });
 
 export default styles;

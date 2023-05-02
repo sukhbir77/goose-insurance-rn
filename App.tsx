@@ -1,17 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text } from 'react-native'
 import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import MainNavigation from './navigation/MainNavigation';
+import { persistor, store } from './redux/store';
+
+import InitialNavigation from './navigation/InitialNavigation';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <MainNavigation />
-    </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer>
+          <InitialNavigation />
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
   )
 }
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;
