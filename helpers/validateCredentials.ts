@@ -1,3 +1,4 @@
+// Validate if the User Entered a Valid Email and Password before making POST request using AXIOS.
 const validateCredentials = (email: string, password: string) => {
     if (
         email !== undefined &&

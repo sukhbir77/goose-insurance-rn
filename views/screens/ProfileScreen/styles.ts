@@ -35,6 +35,12 @@ const styles = StyleSheet.create({
         width: 140,
         flexWrap: "wrap"
     },
+    logoutContainer: {
+        height: 170,
+        justifyContent: "center",
+        backgroundColor: "#FFF",
+        marginTop: 20,
+    },
     logoutButton: {
         marginVertical: 50,
         alignSelf: "center",
@@ -45,11 +51,38 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: "center",
         justifyContent: "center"
-    }, 
+    },
     buttonText: {
-        fontSize: 18, 
-        color: "#FFF", 
-        fontWeight: "500" 
+        fontSize: 18,
+        color: "#FFF",
+        fontWeight: "500"
+    },
+    addContainer: {
+        height: 100,
+        backgroundColor: "#FFF",
+        marginTop: 20,
+        rowGap: 20,
+        padding: 20,
+    },
+    addTextHeader: {
+        color: "#000",
+        fontSize: 14,
+        fontWeight: "bold"
+    },
+    addSubContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    plusLogo: {
+        height: 30,
+        width: 30,
+        resizeMode: "contain"
+    },
+    plusLogoText: {
+        color: "#F72697",
+        fontSize: 14,
+        fontWeight: "bold"
     }
 });
 

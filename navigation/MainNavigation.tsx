@@ -5,6 +5,7 @@ import LoginScreen from '../views/screens/LoginScreen';
 import WelcomeScreen from './../views/screens/WelcomeScreen';
 import { NavigationProp } from '@react-navigation/native';
 
+// Defining Types
 export type ScreenNames = ["Welcome", "Login"];
 export type RootStackParamList = Record<ScreenNames[number], undefined>;
 export type StackNavigation = NavigationProp<RootStackParamList>;

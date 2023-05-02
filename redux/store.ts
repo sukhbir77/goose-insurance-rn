@@ -5,12 +5,14 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import productReducer from './slicers/productSlicer';
 import userReducer from './slicers/userSlicer';
 
+// Configuration To Persist the REDUX State using Asyncstorage.
 const persistConfig = {
     key: "root",
     version: 1,
     storage: AsyncStorage
 }
 
+// Combing Product and User Reducer.
 const rootReducer = combineReducers({
     userData: userReducer,
     productsData: productReducer,
@@ -18,7 +20,7 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-
+// Default Store to be used in the APP.
 export const store = configureStore({
     reducer: persistedReducer,
     middleware: getDefaultMiddleware =>

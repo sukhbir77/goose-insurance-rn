@@ -19,6 +19,7 @@ export const productSlice = createSlice({
     name: "productsData",
     initialState,
     reducers: {
+        // Reducer to save the Products in the Redux Store.
         addProducts: (state: ProductsState, action: PayloadAction<Array<Product>>) => {
             state.products = [...action.payload]
         }

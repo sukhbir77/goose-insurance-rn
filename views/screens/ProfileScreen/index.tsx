@@ -9,7 +9,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { selectUser, deleteUser } from "../../../redux/slicers/userSlicer";
-import { BIRTHDAY_LOGO, HOME_LOGO } from "../../../utils/images";
+import { BIRTHDAY_LOGO, HOME_LOGO, PLUS_LOGO} from "../../../utils/images";
 import styles from "./styles";
 
 const ProfileScreen = () => {
@@ -18,12 +18,18 @@ const ProfileScreen = () => {
 
   return (
     <SafeAreaView style={styles.body}>
+
+      {/* User Details Container */}
       <View style={styles.detailsContainer}>
         <Text style={styles.nameText}>{user.name}</Text>
+
+        {/* Birthday Container*/}
         <View style={styles.bodyDetailsContainer}>
           <Image source={BIRTHDAY_LOGO} style={styles.logo} />
           <Text style={styles.bodyText}>{user.birthday}</Text>
         </View>
+
+        {/* Address Container */}
         <View
           style={[styles.bodyDetailsContainer, { alignItems: "flex-start" }]}
         >
@@ -33,65 +39,46 @@ const ProfileScreen = () => {
           </View>
         </View>
       </View>
+
+      {/* Add Family Member Container */}
       <View
-        style={{
-          height: 100,
-          backgroundColor: "#FFF",
-          marginTop: 20,
-          rowGap: 20,
-          padding: 20,
-        }}
+        style={styles.addContainer}
       >
-        <Text style={{ color: "#000", fontSize: 14, fontWeight: "bold" }}>
+        <Text style={styles.addTextHeader}>
           My Family
         </Text>
         <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={styles.addSubContainer}
         >
           <Image
-            source={require("../../../assets/icons/ProfileScreen/plus.png")}
-            style={{ height: 30, width: 30, resizeMode: "contain" }}
+            source={PLUS_LOGO}
+            style={styles.plusLogo}
           />
-          <Text style={{color: "#F72697", fontSize: 14, fontWeight: "bold"}}>Add family member</Text>
+          <Text style={styles.plusLogoText}>Add family member</Text>
         </View>
       </View>
+
+      {/* Add Payment Method Container */}
       <View
-        style={{
-          height: 100,
-          backgroundColor: "#FFF",
-          marginTop: 20,
-          rowGap: 20,
-          padding: 20,
-        }}
+        style={styles.addContainer}
       >
-        <Text style={{ color: "#000", fontSize: 14, fontWeight: "bold" }}>
+        <Text style={styles.addTextHeader}>
           Payment Methods
         </Text>
         <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={styles.addSubContainer}
         >
           <Image
-            source={require("../../../assets/icons/ProfileScreen/plus.png")}
-            style={{ height: 30, width: 30, resizeMode: "contain" }}
+            source={PLUS_LOGO}
+            style={styles.plusLogo}
           />
-          <Text style={{color: "#F72697", fontSize: 14, fontWeight: "bold"}}>Add Payment method</Text>
+          <Text style={styles.plusLogoText}>Add Payment method</Text>
         </View>
       </View>
+
+      {/* Logout Button Container */}
       <View
-        style={{
-          height: 170,
-          justifyContent: "center",
-          backgroundColor: "#FFF",
-          marginTop: 20,
-        }}
+        style={styles.logoutContainer}
       >
         <TouchableOpacity
           style={styles.logoutButton}

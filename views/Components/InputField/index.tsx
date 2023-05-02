@@ -1,5 +1,5 @@
-import { View, Text, TextInput } from 'react-native';
-import React, { useState, useRef, Dispatch, SetStateAction } from 'react';
+import { TextInput } from 'react-native';
+import React, { useState} from 'react';
 
 interface InputFieldProps {
     mode: any;
@@ -8,6 +8,7 @@ interface InputFieldProps {
 }
 
 const InputField = (props: InputFieldProps) => {
+    // State for storing if the field is focused or not.
     const [borderColor, setBorderColor] = useState<String>("#c3c3cb");
     const isPassword = props.mode !== "email";
 

@@ -21,19 +21,27 @@ import validateCredentials from "../../../helpers/validateCredentials";
 import styles from "./styles";
 
 const LoginScreen = () => {
+
+  // UseState to store Email, Password coming from inputFields.
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const [erroMessage, setErrorMessage] = useState("Please Enter Valid Credentials");
 
   const dispatch = useDispatch();
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
+  // POST request handler for User information and Products Array.
   const getData = () => {
+
+    // Converting email and Password to Lower case as the API is senstive to Characters.
     const lowerCaseEmail = email.toLowerCase();
     const lowerCasePassword = password.toLowerCase();
 
+    // Validate Email and Password format and standard before POST request.
     const isValid = validateCredentials(lowerCaseEmail, lowerCasePassword);
 
+    // POST request if email and password are valid.
     if (isValid) {
       axios
         .post(
@@ -45,13 +53,17 @@ const LoginScreen = () => {
         )
         .then(function (response) {
           if (response.status === 200) {
+
+            // Dispatching actions to the store.
             dispatch(addUser(response.data.user));
             dispatch(addProducts(response.data.products));
             setError(false);
+            setErrorMessage("Please Enter Valid Credentials");
           }
         })
         .catch(function (error) {
           console.log(error);
+          setErrorMessage("User does not exist or not registered!")
           setError(true);
         });
     } else {
@@ -61,6 +73,8 @@ const LoginScreen = () => {
 
   return (
     <SafeAreaView style={styles.body}>
+
+      {/* Header Container Goose Logo & Back Button */}
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image source={BACK_LOGO} style={styles.backArrowLogo} />
@@ -69,6 +83,7 @@ const LoginScreen = () => {
         <View style={styles.backArrowLogo}></View>
       </View>
 
+      {/* Email and Password input Fields and labels */}
       <View style={styles.loginContainer}>
         <Text style={styles.loginText}>Login</Text>
         <View style={styles.emailContainer}>
@@ -85,14 +100,16 @@ const LoginScreen = () => {
         </View>
       </View>
 
+      {/* Error Container */}
       {error && (
         <View style={styles.errorContainer}>
           <Text style={[styles.bodyText, { color: "red" }]}>
-            Please Enter Valid Credentials
+            {erroMessage}
           </Text>
         </View>
       )}
 
+      {/* Login Button */}
       <TouchableOpacity style={styles.loginButton} onPress={() => getData()}>
         <View>
           <Text style={styles.loginTextButton}>Login</Text>

@@ -18,18 +18,27 @@ const HomeScreen = () => {
 
     return (
         <SafeAreaView style={styles.body}>
+
+            {/* Header With Goose & Rewards Logo */}
             <View style={styles.bodyUpperContainer}>
                 <View style={styles.headerContainer}>
                     <Image source={GOOSE_LOGO_HOMESCREEN} style={styles.gooseLogoImage} />
                     <Image source={GIFT_LOGO} style={styles.rewardsLogo} />
                 </View>
+
+                {/* Greeting User */}
                 <Text style={styles.textHeadline}>{`Hi ${user.name.split(" ")[0]}, what would you like to protect?`} </Text>
+
+                {/* Category Container */}
                 <View style={styles.categoryContainer}>
                     <Image source={LIFE_INSURANCE_LOGO} style={styles.categoryImage} />
                     <Text style={styles.categoryText}>Life & Health</Text>
                 </View>
             </View>
+            {/* Little Triangle Container */}
             <View style={styles.triangle}></View>
+
+            {/* Sub Categories Container */}
             <View style={styles.bodyBottomContainer}>
                 <View style={styles.bodyCategoriesContainer}>
                     {products.map((item, index) => {
@@ -37,6 +46,7 @@ const HomeScreen = () => {
                         const imageSource = getImageSource(index);
 
                         return (
+                            // Individual Sub-Category Container
                             <View key={index} style={[styles.insuranceCategoriesContainer, styles.elevation, { marginRight: (index + 1) % 3 === 0 ? 0 : 20 }]}>
                                 <Image source={imageSource} style={styles.insuranceCategoriesImage} />
                                 <Text style={styles.insuranceCategoriesText}>{splitString}</Text>
