@@ -1,37 +1,16 @@
-# React Native Typescript
-React Native Typescript Application targeting both iOS and Android.
-Technologies or libraries used react-native, typescript, redux-persist, 
-react-navigation.
+# GooseInsurance Mobile App Replica
 
-## Requirements
+This repository contains a React Native app developed with TypeScript, serving as a replica of the GooseInsurance mobile application. The project aims to mimic the functionality and design of the original app, providing a learning resource and a basis for further enhancements.
 
-### Android
+## Features
 
-1. Node Js
-2. Development Environment (Android Studio & Visual Studio Code or Code Editor)
-3. React Native 
-4. Java JDK
-5. Android Studio
+- **React Native:** Developed using the React Native framework for cross-platform mobile app development.
+- **TypeScript:** Utilizes TypeScript to enhance code quality and developer experience.
+- **Replica of GooseInsurance App:** Mirrors the key features and design elements of the original GooseInsurance mobile application.
+  
+## How to Run
 
-### iOS
+1. Clone the repository:
 
-1. OS X
-2. New to Xcode?  [Download it](https://developer.apple.com/xcode/downloads/) from the Mac App Store.
-3. [Homebrew](http://brew.sh/) is the recommended way to install node, watchman, and flow.
-4. New to node or npm? `brew install node`
-
-## Quick start
-
-Get up and running with Goose Insurance app:
-
-1. Once you have the repo cloned and met all the requirements above, start the
-packager that will transform your JS code on-the-fly:
-```
-npm install
-```
-2. Open the project in Xcode or Android Studio or Code editor of your choice.
-3. Start the development build
-```
-npx react-native start
-```
-5. Start building on iOS or android simulator.
+   ```bash
+   git clone https://github.com/sukhbir77/GooseInsurance.git
