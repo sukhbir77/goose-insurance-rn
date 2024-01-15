@@ -17,16 +17,17 @@ This repository contains a React Native app developed with TypeScript, serving a
    ```
 
 2. Navigate to the project folder:
-  ```bash
-  cd GooseInsurance
-  ```
+  
+   ```bash
+   cd GooseInsurance
+   ```
 
 3. Install dependencies:
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
 
 4. Run the app:
-  ```bash
-  npm start
-  ```
+   ```bash
+   npm start
+   ```
