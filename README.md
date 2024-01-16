@@ -13,7 +13,7 @@ This repository contains a React Native app developed with TypeScript, serving a
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sukhbir77/GooseInsurance.git
+   git clone https://github.com/sukhbir77/goose-insurance-rn.git
    ```
 
 2. Navigate to the project folder:
